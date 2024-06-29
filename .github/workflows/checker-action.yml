@@ -36,6 +36,14 @@ jobs:
         ruby-version: '2.7.8'
         bundler-cache: false
 
+    - name: Cache gems
+      uses: actions/cache@v3
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+
     - name: Update RubyGems
       run: |
         gem install rubygems-update -v 3.3.22
@@ -45,7 +53,7 @@ jobs:
     - name: Install dependencies
       run: |
         gem install bundler
-        bundle install
+        bundle install --path vendor/bundle
 
     - name: Run Rubocop
       run: |
