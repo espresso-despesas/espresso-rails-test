@@ -33,6 +33,12 @@ jobs:
         ruby-version: '2.7.8'
         bundler-cache: true
 
+    - name: Update RubyGems
+      run: |
+        gem install rubygems-update -v 3.3.22
+        update_rubygems
+        gem --version
+
     - name: Install dependencies
       run: |
         gem install bundler
