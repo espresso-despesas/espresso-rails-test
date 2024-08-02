@@ -10,36 +10,39 @@ Certifique-se de incluir testes automatizados e garantir a cobertura total para 
 Você irá criar uma aplicação web para gerenciamento de despesas de cartões corporativos integrados a um BaaS (_Banking as a Service_), onde os funcionários poderão comprovar e classificar suas despesas.
 
 ## Requisitos
-1. **Perfis de acesso**
+1. **Cadastro da conta**
+
+    Usuário deve ser capaz de criar uma nova conta, informando os seus dados pessoais (nome, email e senha) e os dados da empresa (nome e cnpj). O usuário que criar a conta será definido como administrador dessa conta para a empresa;
+
+2. **Perfis de acesso**
 
     Deverá existir dois perfis de acesso: **Administrador** e **Funcionário**.
 
-2. **Funções do perfil Administrador**
+3. **Funções do perfil Administrador**
 
     O usuário de perfil administrador deve ser capaz de:
 
-    * Criar uma nova conta, informando os seus dados pessoais (nome, email e senha) e os dados da empresa (nome e cnpj);
     * Acessar sua conta informado email e senha;
-    * Visualizar a lista de despesas de todos os cartões;
+    * Visualizar a lista de despesas de todos os cartões de sua empresa;
     * Visualizar de forma segmentada as despesas comprovadas, não comprovadas e arquivadas;
     * Arquivar despesas ainda não comprovadas;
     * Cadastrar, editar e excluir os funcionários dessa empresa. No cadastro deve ser possível informar os dados de nome e email do funcionário. Ao efetuar o cadastro, o funcionário deve receber um email com sua senha de acesso;
     * Cadastrar, editar e excluir os cartões corporativos. No cadastro deve ser possível informar os últimos 4 dígitos do cartão. Deve ser possível também associar um cartão a um funcionário;
     * Cadastrar, editar e excluir as categorias para classificação das despesas;
 
-3. **Funções do perfil Funcionário**
+4. **Funções do perfil Funcionário**
 
     O usuário de perfil funcionário deve ser capaz de:
 
     * Acessar sua conta informado email e senha. Senha será recebida no email de cadastro;
     * Visualizar a lista de despesas dos seus cartões;
-    * Visualizar de forma segmentada as suas despesas comprovadas, não comprovadas e arquivadas;
+    * Visualizar de forma segmentada as suas despesas comprovadas e não comprovadas;
     * Anexar um comprovante em despesas do seu cartão. Formatos suportados: jpeg, png ou pdf;
     * Atualizar comprovante da despesa;
     * Associar uma categoria em despesas do seu cartão;
     * Atualizar categoria da despesa;
 
-4. **Gerenciamento de Despesas**
+5. **Gerenciamento de Despesas**
 
     As despesas devem ser listadas pela ordem das mais recentes primeiro. A despesa é definida como comprovada, ou de prestação de contas concluída, quando estiver associada um arquivo de comprovação e classificada com uma categoria. Deve haver uma segmentação das despesas comprovadas, não comprovadas, e arquivadas. Nenhuma despesa de cartão poderá ser excluída, porém o administrador terá a possibilidade de arquivar alguma despesa que não necessite de prestação de contas.
 
@@ -142,6 +145,10 @@ Você irá criar uma aplicação web para gerenciamento de despesas de cartões 
     Segue abaixo o link com os desenhos das telas que deverão ser implementadas nessa aplicação web. É importante desenvolver o front-end seguindo os detalhes determinados nesses desenhos, será parte importante na avaliação.
 
     https://www.figma.com/design/Bsghtem8nzyfUBxYhRScjH/Teste-T%C3%A9cnico-para-Desenvolvedores-Ruby-on-Rails
+
+6. **Github Actions**
+
+    Após o fork do projeto, acesse a aba "Actions", e habilite a execução de workflows. Fazer esse passo nós ajuda na avaliação inicial de qualidade do seu projeto.
 
 ## Avaliação
 
